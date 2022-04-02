@@ -12,59 +12,60 @@ package Ejercicios;
 // f. Inicializar un objeto Rectángulo con los valores por defecto y verificar. 
 
 public class Ejercicio1 {
-    
+
     private double alto;
     private double ancho;
 
-
-    //constructor a. Inicializar un objeto Rectángulo estableciendo ancho y alto. 
-    public Ejercicio1(double alto, double ancho){
+    // constructor a. Inicializar un objeto Rectángulo estableciendo ancho y alto.
+    public Ejercicio1(double alto, double ancho) {
 
         this.alto = (alto <= 0) ? 1.0 : alto;
-        this.ancho = (ancho <= 0) ? 1.0 :  ancho;
+        this.ancho = (ancho <= 0) ? 1.0 : ancho;
 
     }
 
-
-    //getters y setters
+    // getters y setters
     public double getAlto() {
         return alto;
     }
+
     public double getAncho() {
         return ancho;
     }
+
     public void setAncho(double ancho) {
         this.ancho = ancho;
     }
+
     public void setAlto(double alto) {
         this.alto = alto;
     }
 
-    
-    public String anchoYalto(){ //b. Imprimir por pantalla el alto y ancho. 
-        return "Alto: " + alto + " Ancho: "+ ancho  ;
+    public String anchoYalto() { // b. Imprimir por pantalla el alto y ancho.
+        return "Alto: " + alto + " Ancho: " + ancho;
 
     }
 
-    //c. Imprimir por pantalla el área y perímetro. 
-    private double area(){
+    // c. Imprimir por pantalla el área y perímetro.
+    public double getArea() {
 
         return ancho * alto;
     }
-  
-    private double perimetro(){
+
+    public double getPerimetro() {
 
         return 2 * (ancho + alto);
 
     }
-    public String AreaPerimetro(){
 
-        return "Area: " + area() + "\n" + "Perimetro: " + perimetro();
+    public String AreaPerimetro() {
+
+        return "Area: " + getArea() + "\n" + "Perimetro: " + getPerimetro();
 
     }
 
-    //d. Modificar el alto y el ancho de la instancia.
-    public void CambiarAltoAncho(double alto, double ancho){
+    // d. Modificar el alto y el ancho de la instancia.
+    public void CambiarAltoAncho(double alto, double ancho) {
         this.alto = alto;
         this.ancho = ancho;
     }

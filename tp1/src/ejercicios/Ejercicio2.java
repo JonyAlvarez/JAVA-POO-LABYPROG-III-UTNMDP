@@ -22,7 +22,7 @@ public class Ejercicio2 {
     private String apellido;
     private double salario;
 
-    public Ejercicio2(int dni, String n, String a, double salario){
+    public Ejercicio2(int dni, String n, String a, double salario) {
 
         this.dni = dni;
         this.nombre = n;
@@ -31,25 +31,52 @@ public class Ejercicio2 {
 
     }
 
-    //getters setters
+    // getters setters
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
 
-    public int getDni(){
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public int getDni() {
         return dni;
     }
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    public String getApellido(){
+
+    public String getApellido() {
         return apellido;
     }
-    public double getSalario(){
+
+    public double getSalario() {
         return salario;
     }
-    
-    public String MuestraEmpleado(){
-        return "Empleado: dni= "+ getDni() +",  nombre= " + getNombre() +", apellido= " + getApellido() + ", salario= " + getSalario() ;
+
+    public String MuestraEmpleado() {
+        return "Empleado: dni= " + getDni() + ",  nombre= " + getNombre() + ", apellido= " + getApellido() + ", salario= " + getSalario();
     }
 
-    
+    public double salarioAnual() {
+        double salario = getSalario();
+        return salario * 12;
+    }
 
+    public void aumentarSalario(int aumento){
+       double calculo = getSalario() / 100;
+       double salarioPorcentaje = calculo * aumento;
+       double salarioFinal = getSalario() + salarioPorcentaje;
+       setSalario(salarioFinal);
+    }
 }
