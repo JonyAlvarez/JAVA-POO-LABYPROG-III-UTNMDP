@@ -1,5 +1,8 @@
-import Ejercicios.Ejercicio1;
-import Ejercicios.Ejercicio2;
+import ejercicios.Ejercicio1;
+import ejercicios.Ejercicio2;
+import ejercicios.Ejercicio3;
+import ejercicios.Ejercicio4;
+import ejercicios.Ejercicio3;
 
 public class Main {
     public static void main(String args[]) {
@@ -55,10 +58,26 @@ public class Main {
 
         // ###################### Ejercicio 3 ######################
 
-
-
-
         
+        
+
+        // Ejercicio3 producto = new Ejercicio3(1, "remera escote V", 35, 1400);// a. Inicialice el objeto con los atributos necesarios 
+        // System.out.println(producto.getProducto());// b. Imprima por pantalla el objeto inicializado.
+       
+        // ###################### Ejercicio 4 ######################
+
+        Ejercicio4 cuenetaBancaria = new Ejercicio4(1, "Jony", 15000);     // 1. Inicialice una cuenta con un monto inicial de 15000. 
+
+        cuenetaBancaria.credito(2500);        // 2. Realice una operación de crédito de 2500. 
+
+
+        cuenetaBancaria.compra(1500);        // 3. Realice una operación de compra de 1500. 
+        cuenetaBancaria.compra(30000);        // 4. Realice una operación de compra de 30000. 
+
+        System.out.println(cuenetaBancaria.PrintAccount());        // 5. Imprima por pantalla los valores de la cuenta y verifique que el balance sea correcto. 
+        
+
+
     }
 
 }

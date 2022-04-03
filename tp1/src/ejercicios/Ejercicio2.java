@@ -1,4 +1,4 @@
-package Ejercicios;
+package ejercicios;
 
 // 2.Modele el objeto Empleado que posee las siguientes características, dni, nombre, 
 // apellido y salario. El mismo debe contar con la posibilidad de calcular el salario 

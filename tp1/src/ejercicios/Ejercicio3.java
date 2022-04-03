@@ -1,24 +1,23 @@
-package Ejercicios;
+package ejercicios;
 
-// 3. Modele el objeto Ítem de Venta con las siguientes propiedades, identificador,
-
+// 3. Modele el objeto item de Venta con las siguientes propiedades, identificador,
 // descripción, cantidad y precio unitario. Cree los métodos para calcular el precio 
 // total teniendo en cuenta el precio unitario y cantidad. Un método que permita 
 // imprimir por pantalla los atributos del objeto de la siguiente forma: 
-// ItemVenta[id=?, descripción=?, cantidad=?, pUnitario=?, pTotal=?] 
+// ItemVentaid=?, descripción=?, cantidad=?, pUnitario=?, pTotal=? 
 // a. Inicialice el objeto con los atributos necesarios 
 // b. Imprima por pantalla el objeto inicializado.
 
 public class Ejercicio3 {
 
     private int identificador;
-    private String descripción;
+    private String descripcion;
     private int cantidad;
     private double precioUnitario;
 
-    public Ejercicio3(int identificador, String descripción, int cantidad, double precioUnitario) {//constructor
+    public Ejercicio3(int identificador, String descripcion, int cantidad, double precioUnitario) {//constructor
         this.identificador = identificador;
-        this.descripción = descripción;
+        this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
     }
@@ -38,8 +37,8 @@ public class Ejercicio3 {
         return cantidad;
     }
 
-    public String getDescripción() {
-        return descripción;
+    public String getDescripcion() {
+        return descripcion;
     }
     //SETTERS
     public void setPrecioUnitario(double precioUnitario) {
@@ -50,15 +49,30 @@ public class Ejercicio3 {
         this.cantidad = cantidad;
     }
 
-    public void setDescripción(String descripción) {
-        this.descripción = descripción;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
 
+    //Cree los métodos para calcular el precio  total teniendo en cuenta el precio unitario y cantidad.
+    public double getPrecioTotal(){
 
+        int cant = getCantidad();
+        double precioUnitario = getPrecioUnitario();
+
+        return precioUnitario * cant;
+
+    }
+   
+// Un método que permita  imprimir por pantalla los atributos del objeto de la siguiente forma: 
+// ItemVenta id=?, descripción=?, cantidad=?, pUnitario=?, pTotal=?]
+
+    public String getProducto(){
+        return " ID: " + getIdentificador() + "," + " Descripcion: " + getDescripcion()+ "," + " Cantidad: " + getCantidad()+ ","  + " pUnitario: " + getPrecioUnitario()+ ","  + " pTotal: " + getPrecioTotal();
+    }
 
 
 

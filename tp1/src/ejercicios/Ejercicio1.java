@@ -1,4 +1,4 @@
-package Ejercicios;
+package ejercicios;
 
 // 1. Modele el objeto Rectángulo con sus propiedades, ancho y alto. Ambas con valor 
 // 1,0 por defecto. Este objeto debe exponer los getters y setters necesarios. También 
